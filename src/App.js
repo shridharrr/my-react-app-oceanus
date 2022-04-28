@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import Textbox from './Textbox';
 
@@ -7,15 +7,40 @@ import Textbox from './Textbox';
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  //  useEffect(() => {
+
+  //    fetch('http://localhost:9090/user/login', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //      email:"shri@gmail.com",
+  //        password :123456
+  //      })
+  //    })
+  //      .then((results) => results.json())
+  //     .then((data) => { 
+  //       console.log(data)
+
+
+  //    }).catch(err => {
+      
+  //    })
+  //  })
+
   function onSubmit(e) {
     
-    fetch('', {
+    fetch('http://localhost:9090/user/login', {
       method: 'POST',
       body: JSON.stringify({
-        email,
-        password
-      })
+        "email": email,
+        "password" : password
+      }),
+      headers:{
+
+      
+      'Content-Type': 'application/json'
+      }
     }).then(res => {
+      console.log(res.json())
 
     }).catch(err => {
       

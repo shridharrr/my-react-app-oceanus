@@ -149,3 +149,43 @@ section .contentBx .formBx .inputBx input:hover{
     
     
 }
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+   }
+.row{
+    background-color: rgb(252, 243, 226);
+    width: 75%;
+    margin-bottom: 25%;
+    
+    
+
+}
+
+
+.col-1{
+padding: 1%;
+width: 15%;
+
+}
+.col-2{
+    margin-top: 10%;
+    text-align: center;
+    background-color: rgb(71, 71, 245);
+    width: 70%;
+    padding-bottom: 100%
+    
+}
+
+.btn{
+   
+   background: none;
+   color: white;
+   box-shadow: none;
+   border: none;
+   cursor: pointer;
+   
+   }
+   
+  
